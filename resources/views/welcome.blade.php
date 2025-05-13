@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    @vite('resources/css/app.css')
+</head>
+<body>
+    
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        @livewireStyles
-    </head>
-    <body class="antialiased">
-        @php
-            $name = "farshid";
-        @endphp
-        <livewire:post.create :name="$name" />
-
-        @livewireScripts
-    </body>
+    @vite(['resources/js/app.js', 'resources/js/alert.js'])
+</body>
 </html>
